@@ -349,7 +349,6 @@ with st.expander("🔧 Диагностика (для разработчика)"
     
     if description_col is None:
         st.error("❌ Не найдена колонка с описаниями дел! Доступные колонки: " + ", ".join(df.columns))
-        return None
     
     # Очищаем колонку с описаниями
     df = clean_description_column(df, description_col)
