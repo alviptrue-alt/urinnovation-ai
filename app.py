@@ -365,9 +365,6 @@ with st.expander("🔧 Диагностика (для разработчика)"
     if outcome_col and outcome_col in df.columns:
         outcomes = df[outcome_col].value_counts()
         st.caption(f"📊 Распределение исходов: " + ", ".join([f"{k}: {v}" for k, v in outcomes.items()]))
-    
-    return df
-
 
 @st.cache_resource
 def load_model():
